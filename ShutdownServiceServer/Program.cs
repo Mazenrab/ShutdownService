@@ -1,36 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Management;
 using System.Net;
 using System.Net.Sockets;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using CommandLine;
-using CommandLine.Text;
 using Newtonsoft.Json;
 
 namespace ShutdownServiceServer
 {
-
-    public class ServerOptions
-    {
-        [Option("p", Required = true, HelpText = "Server port")]
-        public int Port { get; set; }
-
-        [Option("k", Required = true, HelpText = "Key")]
-        public string Key { get; set; }
-
-        [HelpOption]
-        public string GetUsage()
-        {
-            return HelpText.AutoBuild(this, (HelpText current) => HelpText.DefaultParsingErrorsHandler(this, current));
-        }
-
-    }
-
-
     class Program
     {
         private static string Key;
