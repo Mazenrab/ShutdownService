@@ -2,14 +2,13 @@
 using System.Net.Sockets;
 using Newtonsoft.Json;
 
-
 namespace ShutdownClient
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var options = new ServerOptions();
+            var options = new ClientOptions();
             if (CommandLine.Parser.Default.ParseArguments(args, options))
             {
                 // Values are available here

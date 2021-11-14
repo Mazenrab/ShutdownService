@@ -4,7 +4,7 @@ using ShutdownMessage;
 
 namespace ShutdownClient
 {
-    public class ServerOptions
+    public class ClientOptions
     {
         [Option("s", Required = true, HelpText = "Server name")]
         public string Server { get; set; }
