@@ -15,7 +15,6 @@ namespace ShutdownClient
                 // Values are available here
                 Console.WriteLine("Server name: {0}", options.Server);
                 Console.WriteLine("Server port: {0}", options.Port);
-
             }
             else
                 return;
@@ -61,8 +60,11 @@ namespace ShutdownClient
                 Console.WriteLine("SocketException: {0}", e);
             }
 
-            Console.WriteLine("\n Press Enter to continue...");
-            Console.Read();
+            if (options.Pause)
+            {
+                Console.WriteLine("\n Press Enter to continue...");
+                Console.Read();
+            }
         }
     }
 }

@@ -21,7 +21,9 @@ namespace ShutdownClient
         [Option("a", DefaultValue = ShutdownOption.Shutdown, HelpText = "Message")]
         public ShutdownOption ShutdownOption { get; set; }
 
-
+        [Option("p", DefaultValue = false, HelpText = "Pause")]
+        public bool Pause { get; set; }
+        
         [HelpOption]
         public string GetUsage()
         {
